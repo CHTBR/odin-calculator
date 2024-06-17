@@ -9,7 +9,6 @@
 
 /* CALCULATOR */
 #calculator-container {
-    border: 1px solid black;
     width: 20vw;
     aspect-ratio: 3/5;
     display: flex;
@@ -28,8 +27,13 @@
 
 /* BUTTONS */
 button {
+    border: none;
     border-radius: 5px;
     box-shadow: 4px 4px inset var(--shadow-light), -4px -4px inset var(--shadow-dark);
+}
+
+button:active {
+    box-shadow: 4px 4px inset var(--shadow-dark), -4px -4px inset var(--shadow-light);
 }
 
 .action-button {
