@@ -82,6 +82,9 @@ function returnEvaluatedExpression(firstNumber, secondNumber, operation) {
 }
 
 function returnRoundedNumber(number) {
+    if (number === 0) {
+        return 0;
+    }
     if (number >= 1 || number <= -1) {
         return String(number.toPrecision(6));
     } else {
