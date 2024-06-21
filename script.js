@@ -36,7 +36,7 @@ buttonContainer.addEventListener("click", event =>{
         } else if (target.id === "evaluate") {
             if (firstNumber && secondNumber && operation) {
                 result = returnEvaluatedExpression(firstNumber, secondNumber, operation);
-                if (result === Infinity || result === -Infinity) {
+                if (result === "Infinity" || result === "-Infinity") {
                     result = "Out of range";
                 }
                 firstNumber = "";
