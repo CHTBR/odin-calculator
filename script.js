@@ -78,7 +78,7 @@ function returnEvaluatedExpression(firstNumber, secondNumber, operation) {
 }
 
 function returnRoundedNumber(number) {
-    if (number > 1 || number < -1) {
+    if (number >= 1 || number <= -1) {
         return String(number.toPrecision(6));
     } else {
         longNumber = (number).toExponential();
