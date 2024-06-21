@@ -33,6 +33,9 @@ buttonContainer.addEventListener("click", event =>{
                 secondNumber = "";
             }
             updateDisplay("");
+            console.log(firstNumber);
+            console.log(operation);
+            console.log(secondNumber);
         }
     }
 });
@@ -46,9 +49,9 @@ function returnEvaluatedExpression(firstNumber, secondNumber, operation) {
     secondNumber = +secondNumber;
     switch (operation) {
         case "add":
-            return String(firstNumber + secondNumber);
+            return String(returnRoundedNumber(firstNumber + secondNumber));
         case "substract":
-            return String(firstNumber - secondNumber);
+            return String(returnRoundedNumber(firstNumber - secondNumber));
         case "multiply":
             return String(returnRoundedNumber(firstNumber * secondNumber));
         case "divide":
