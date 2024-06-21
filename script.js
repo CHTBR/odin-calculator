@@ -25,14 +25,15 @@ buttonContainer.addEventListener("click", event =>{
                 firstNumber = returnEvaluatedExpression(firstNumber, secondNumber, operation);
                 operation = target.id;
                 secondNumber = "";
+                updateDisplay(firstNumber);
             } else if (firstNumber) {
                 operation = target.id;
             } else if (result) {
                 firstNumber = result;
                 operation = target.id;
                 secondNumber = "";
+                updateDisplay(firstNumber);
             }
-            updateDisplay("");
         } else if (target.id === "evaluate") {
             if (firstNumber && secondNumber && operation) {
                 result = returnEvaluatedExpression(firstNumber, secondNumber, operation);
