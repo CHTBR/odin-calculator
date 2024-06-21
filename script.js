@@ -44,6 +44,12 @@ buttonContainer.addEventListener("click", event =>{
                 operation = "";
                 updateDisplay(result);
             }
+        } else if (target.id === "clear") {
+            firstNumber = "";
+            secondNumber = "";
+            operation = "";
+            result = "";
+            updateDisplay("");
         }
     }
 });
