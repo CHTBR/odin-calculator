@@ -81,7 +81,7 @@ function returnRoundedNumber(number) {
         return String(number.toPrecision(6));
     } else {
         longNumber = (number).toExponential();
-        shortNumber = longNumber.match(/[\d.]{6}/) + longNumber.match(/e-\d+/);
+        shortNumber = longNumber.match(/[\d.]{0,6}/) + longNumber.match(/e-\d+/);
         return shortNumber;
     }
 }
