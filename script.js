@@ -69,6 +69,9 @@ function returnEvaluatedExpression(firstNumber, secondNumber, operation) {
         case "multiply":
             return String(returnRoundedNumber(firstNumber * secondNumber));
         case "divide":
+            if (secondNumber === 0) {
+                return "lol, no";
+            }
             return String(returnRoundedNumber(firstNumber / secondNumber));
     }
 }
