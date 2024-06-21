@@ -33,9 +33,17 @@ buttonContainer.addEventListener("click", event =>{
                 secondNumber = "";
             }
             updateDisplay("");
-            console.log(firstNumber);
-            console.log(operation);
-            console.log(secondNumber);
+        } else if (target.id === "evaluate") {
+            if (firstNumber && secondNumber && operation) {
+                result = returnEvaluatedExpression(firstNumber, secondNumber, operation);
+                if (result === Infinity || result === -Infinity) {
+                    result = "Out of range";
+                }
+                firstNumber = "";
+                secondNumber = "";
+                operation = "";
+                updateDisplay(result);
+            }
         }
     }
 });
