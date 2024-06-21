@@ -60,7 +60,11 @@ function updateDisplay(text) {
 }
 
 function returnEvaluatedExpression(firstNumber, secondNumber, operation) {
-    firstNumber = +firstNumber;
+    if (firstNumber === "lol, no") {
+        firstNumber = 0;
+    } else {
+        firstNumber = +firstNumber;
+    }
     secondNumber = +secondNumber;
     switch (operation) {
         case "add":
