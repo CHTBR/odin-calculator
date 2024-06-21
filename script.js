@@ -8,9 +8,7 @@ let result ="";
 buttonContainer.addEventListener("click", event =>{
     const target = event.target;
     if (target.tagName === "BUTTON") {
-        console.log("recognised as button")
         if (target.classList.item(0) === "number-button") {
-            console.log("recognised as number button")
             if (!operation) {
                 if (firstNumber.length < 6) {
                     firstNumber += target.id;
@@ -22,6 +20,19 @@ buttonContainer.addEventListener("click", event =>{
                     updateDisplay(secondNumber);
                 }
             }
+        } else if (target.classList.item(1) === "operation") {
+            if (secondNumber) {
+                firstNumber = returnEvaluatedExpression(firstNumber, secondNumber, operation);
+                operation = target.id;
+                secondNumber = "";
+            } else if (firstNumber) {
+                operation = target.id;
+            } else if (result) {
+                firstNumber = result;
+                operation = target.id;
+                secondNumber = "";
+            }
+            updateDisplay("");
         }
     }
 });
